@@ -1,7 +1,7 @@
 name: Simple Start Up
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
 jobs:
   build:
     name: Build my virtual OS
