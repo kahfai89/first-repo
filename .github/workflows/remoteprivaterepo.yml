@@ -3,7 +3,7 @@ uses: actions/checkout@v2
 with:
     repository: ICT-CET-Activities/hiddenRepo
     path: remoteprivaterepo
-    token: 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
+    token: ${{secrets.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}}
 name: Show hidden files
 run: |
   cd remoteprivaterepo   
