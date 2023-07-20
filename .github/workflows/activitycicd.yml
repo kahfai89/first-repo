@@ -1,0 +1,30 @@
+name: Calculator 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Calculator
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v2
+        with:
+          repository: kahfai89/first-repo
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 
+      
+      - name: Install dependencies
+        run: |
+          pip install pytest pytest-mock
+
+      - name: Run pytest
+        run: pytest test_main.py
